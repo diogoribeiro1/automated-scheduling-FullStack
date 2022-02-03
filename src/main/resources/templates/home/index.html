@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Atiliê Isabela Carvalho</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(img/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px;
+
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img{
+    position: relative;
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    width: 10%;
+
+}
+
+header  .navbar{
+    position: relative;
+    display: flex;
+
+}
+
+header  .navbar li{
+    list-style: none;
+
+}
+
+header  .navbar li a{
+    display: inline-block;
+    color: #BB4E26;
+    margin-right: 40px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.content{
+    max-width: 600px;
+
+}
+.content .contentBx h2{
+    font-size: 4em;
+    color: #fff;
+    line-height: 1em;
+
+}
+
+.content .contentBx p{
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+    margin: 20px 0;
+    
+}
+
+.content .contentBx .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #BB4E26;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.btn2{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    border-color: #BB4E26;
+    border-style: solid;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.color{
+    color: #BB4E26;
+}
+
+.icons{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    color: #BB4E26;
+}
+
+
+.icons li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icons li a{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 25px;
+    color: #BB4E26;
+   
+}
+
+@media (max-width: 991px) {
+        header{
+            padding: 15px 40px;
+        }
+        section{
+            padding: 40px;
+            background-image: url('img/bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .content .contentBx h2{
+            font-size: 2.5em;
+        }
+
+        .content .contentBx a{
+            font-size: 1em;
+        }
+
+        header .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, .2);
+            backdrop-filter: blur(7px);
+            z-index: 10;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        header .navbar.active{
+            display: flex;
+        }
+
+        header .navbar li a{
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .toggleMenu{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: url(assets/img/menu-regular-24.png);
+            background-position: center;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 11;
+        }
+
+        .toggleMenu.active{
+            background: url(assets/img/x-regular-24.png);
+            background-position: center;
+            background-size: 35px;
+            background-repeat: no-repeat;
+        }
+}
+</style>
+<body>
+
+    <section style="background-image: url('img/bg2.jpg');">
+        <header>
+            <a href="#" class="logo"><img src="img/logo1.png" alt=""></a>
+            <div class="toggleMenu" onclick="toggleMenu();"></div>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a th:href="@{/agendar}">Agendamentos</a></li>
+                <li><a href="#">Endereço</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="contentBx">
+                <h2>
+                    Isabela <span class="color">Trancista</span>
+                </h2>
+                <p>
+                    Conheça o <span class="color">melhor</span> e jamais volte
+                    a se contentar com
+                    o <span class="color">básico</span>.
+                </p>
+                <a class="btn" href="#">Serviços</a>
+                <a class="btn2" href="#">Contato</a>
+            </div>
+        </div>
+        <ul class="icons">
+            <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+            <li><a href="https://www.instagram.com/atelie_isabelacarvalho/?hl=pt-br"><i class='bx bxl-instagram-alt'></i></a></li>
+            <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+        </ul>
+    </section>
+</body>
+
+<script src="assets/js/script.js"></script>
+<script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+
+</html>
