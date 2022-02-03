@@ -1,0 +1,213 @@
+*{
+   font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(img/bg2.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px;
+
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img{
+    position: relative;
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    width: 10%;
+
+}
+
+header  .navbar{
+    position: relative;
+    display: flex;
+
+}
+
+header  .navbar li{
+    list-style: none;
+
+}
+
+header  .navbar li a{
+    display: inline-block;
+    color: #BB4E26;
+    margin-right: 40px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.content{
+    max-width: 600px;
+
+}
+.content .contentBx h2{
+    font-size: 4em;
+    color: #fff;
+    line-height: 1em;
+
+}
+
+.content .contentBx p{
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+    margin: 20px 0;
+    
+}
+
+.content .contentBx .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #BB4E26;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.btn2{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    border-color: #BB4E26;
+    border-style: solid;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.color{
+    color: #BB4E26;
+}
+
+.icons{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    color: #BB4E26;
+}
+
+
+.icons li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icons li a{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 25px;
+    color: #BB4E26;
+   
+}
+
+@media (max-width: 600px) {
+        header{
+            padding: 15px 40px;
+        }
+        section{
+            padding: 40px;
+            background: url(img/bg.jgp);
+            background-size: cover;
+            background-position: center;
+        }
+        .content .contentBx h2{
+            font-size: 2.5em;
+        }
+
+        .content .contentBx a{
+            font-size: 1em;
+        }
+
+        header .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, .2);
+            backdrop-filter: blur(7px);
+            z-index: 10;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        header .navbar.active{
+            display: flex;
+        }
+
+        header .navbar li a{
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .toggleMenu{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: url(assets/img/menu-regular-24.png);
+            background-position: center;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 11;
+        }
+
+        .toggleMenu.active{
+            background: url(assets/img/x-regular-24.png);
+            background-position: center;
+            background-size: 35px;
+            background-repeat: no-repeat;
+        }
+        
+        .btn2{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left:0px;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    border-color: #BB4E26;
+    border-style: solid;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+}
