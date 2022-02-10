@@ -31,6 +31,9 @@ public class AgendamentoModel implements Serializable {
 	@Column(name = "data")
 	private String data;
 	
+	@Column(name = "telefone")
+	private String telefone;
+	
 	@Column(name = "email")
 	private String email;
 	
@@ -109,10 +112,18 @@ public class AgendamentoModel implements Serializable {
 		this.tamanho = tamanho;
 	}
 
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
 	@Override
 	public String toString() {
 		return "AgendamentoModel [codigo=" + codigo + ", nome=" + nome + ", local=" + local + ", data=" + data
-				+ ", email=" + email + ", horario=" + horario + ", tipoTranca=" + tipoTranca + ", tamanho=" + tamanho
-				+ "]";
+				+ ", telefone=" + telefone + ", email=" + email + ", horario=" + horario + ", tipoTranca=" + tipoTranca
+				+ ", tamanho=" + tamanho + "]";
 	}
 }
