@@ -13,6 +13,9 @@ Testem o software rodando = https://agendamento-diogoribeiro.herokuapp.com/
     H2 Database<br>
     PostgreSQL<br>
     Thymeleaf<br>
+    HTML5<br>
+    CSS3<br>
+    JavaScript<br>
     BootStrap<br>
     Jquery<br>
 <h1>Screenshots</h1>
