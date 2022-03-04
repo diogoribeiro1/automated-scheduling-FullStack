@@ -135,6 +135,9 @@ public class AgendamentoModel implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Datas Agendadas = " + data;
+		return "AgendamentoModel [nome=" + nome + ", local=" + local + ", data=" + data + ", telefone=" + telefone
+				+ ", email=" + email + ", horario=" + horario + ", tipoTranca=" + tipoTranca + ", tamanho=" + tamanho
+				+ "]";
 	}
+
 }
