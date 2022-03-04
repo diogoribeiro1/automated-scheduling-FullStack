@@ -18,7 +18,7 @@ Testem o software rodando = https://agendamento-diogoribeiro.herokuapp.com/
     JavaScript<br>
     BootStrap<br>
     Jquery<br>
-<h1>Screenshots</h1>
+<h1>Screenshots:</h1>
     <h2>Página Inical</>
                                                         
 ![Captura de tela de 2022-02-24 23-45-47](https://user-images.githubusercontent.com/89152312/156684233-1ed96b6d-f2e6-49fd-85f8-f0d95e4d0488.png)
