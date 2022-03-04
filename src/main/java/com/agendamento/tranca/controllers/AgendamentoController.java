@@ -9,7 +9,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.agendamento.tranca.models.AgendamentoModel;
@@ -42,12 +41,10 @@ public class AgendamentoController {
 	}
 	
 	@GetMapping("/listagendamentos")
-	public ModelAndView listaAgendamentos() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("home/lista_agendamentos");
+	public String listaAgendamentos(Model model) {
 		Iterable<AgendamentoModel> agendamento = service.findAllAgendamento();
-		mv.addObject("agendamento", agendamento);
-		return mv;
+		model.addAttribute("agendamento", agendamento);
+		return "home/lista_agendamentos";
 	}
 	
 	@GetMapping("/delete/{codigo}")
