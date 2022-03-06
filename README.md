@@ -8,6 +8,7 @@ Testem o software rodando = https://agendamento-diogoribeiro.herokuapp.com/
     Spring<br>
     Spring Email<br>
     SMTP Gmail<br>
+    Api ViaCep<br>
     JPA<br>
     Hibernate<br>
     H2 Database<br>
