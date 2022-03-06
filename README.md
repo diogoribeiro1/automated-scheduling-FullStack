@@ -1,5 +1,5 @@
 # automated-scheduling-FullStack
-Software responsivo de agendamento de evento com envio de email, CRUD completo, do BackEnd ao FrontEnd.
+Software responsivo de agendamento com envio de email e uso da api ViaCep , CRUD completo, do BackEnd ao FrontEnd.
 
 Testem o software rodando = https://agendamento-diogoribeiro.herokuapp.com/
 
@@ -19,10 +19,12 @@ Testem o software rodando = https://agendamento-diogoribeiro.herokuapp.com/
     BootStrap<br>
     Jquery<br>
 <h1>Screenshots:</h1>
-    <h2>Página Inical</>
-                                                        
-![Captura de tela de 2022-02-24 23-45-47](https://user-images.githubusercontent.com/89152312/156684233-1ed96b6d-f2e6-49fd-85f8-f0d95e4d0488.png)
-                                                        <h2>Formulário</h2>
-![Captura de tela de 2022-03-03 14-25-46](https://user-images.githubusercontent.com/89152312/156684249-4afa6607-0f46-41c0-bc50-e0b1c40d1410.png)
-                                                       <h2>Página de administração</h2>
-![Captura de tela de 2022-03-03 14-25-57](https://user-images.githubusercontent.com/89152312/156684259-a5a280bb-1e28-4a2a-8c3b-9fa1b684f23e.png)
+                                                               <h2>Página Inical</h2>
+                                                               
+![Captura de tela de 2022-03-05 23-38-11](https://user-images.githubusercontent.com/89152312/156907032-8f7b3f2e-55f6-4bc0-9a41-28560419250d.png)
+                                                               <h2>Formulário</h2>  
+                                                               
+![Captura de tela de 2022-03-05 22-04-34](https://user-images.githubusercontent.com/89152312/156907037-6f36fe36-709f-4f87-b551-57950181fceb.png)
+                                                            <h2>Página do Administrador</h2>
+                                                            
+![Captura de tela de 2022-03-05 21-04-55](https://user-images.githubusercontent.com/89152312/156907042-3be69f0d-7233-4183-acaf-dbe61d1a5f9b.png)
