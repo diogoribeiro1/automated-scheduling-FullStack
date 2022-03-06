@@ -14,9 +14,6 @@ public interface AgendamentoRepository extends JpaRepository<AgendamentoModel, L
 	
 	@Query("select i from AgendamentoModel i where i.data = :data")
 	public AgendamentoModel findByData(String data);
-	
-	@Query("select i from AgendamentoModel i where i.mes = :mes")
-	public AgendamentoModel findByMes(String mes);
-	
+		
 	public List<AgendamentoModel> findByNomeContainingIgnoreCase(String nome);
 }

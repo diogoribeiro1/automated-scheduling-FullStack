@@ -25,19 +25,31 @@ public class AgendamentoModel implements Serializable {
 
 	@Column(name = "nome")
 	private String nome;
+	
+	@Column(name = "email")
+	@Email
+	private String email;
+	
+	@Column(name = "cep")
+	private String cep;
 
 	@Column(name = "local")
 	private String local;
+	
+	@Column(name = "cidade")
+	private String cidade;
+	
+	@Column(name = "bairro")
+	private String bairro;
+	
+	@Column(name = "numero")
+	private String numero;
 
 	@Column(name = "data")
 	private String data;
 
 	@Column(name = "telefone")
 	private String telefone;
-
-	@Column(name = "email")
-	@Email
-	private String email;
 
 	@Column(name = "horario")
 	private String horario;
@@ -49,9 +61,6 @@ public class AgendamentoModel implements Serializable {
 	@Column(name = "tamanho")
 	@Enumerated(EnumType.STRING)
 	private Tamanho tamanho;
-	
-	@Column(name = "mes")
-	private String mes;
 
 	public Long getCodigo() {
 		return codigo;
@@ -75,6 +84,38 @@ public class AgendamentoModel implements Serializable {
 
 	public void setLocal(String local) {
 		this.local = local;
+	}
+	
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getNumero() {
+		return numero;
+	}
+
+	public void setNumero(String numero) {
+		this.numero = numero;
 	}
 
 	public String getData() {
@@ -123,14 +164,6 @@ public class AgendamentoModel implements Serializable {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-
-	public String getMes() {
-		return mes;
-	}
-
-	public void setMes(String mes) {
-		this.mes = mes;
 	}
 
 	@Override

@@ -19,13 +19,11 @@ fieldset:nth-child(2) {
 
 fieldset:nth-child(4) {
 	display: flex;
-	padding-top: 20px;
 }
 
-fieldset:nth-child(5) {
+fieldset:nth-child(8) {
 	display: flex;
 	width: 100%;
-	margin-top: 20px;
 	padding: 0px 10px;
 }
 
@@ -79,13 +77,34 @@ section img {
         border-radius: 15px;
     }
     
+    #cep{
+    	margin-top: 10px;
+        border-radius: 15px;
+    }
+
+    #bairro{
+    	margin-top: 10px;
+        border-radius: 15px;
+    }
+
+    #cidade{
+    	margin-top: 10px;
+        border-radius: 15px;
+    }
+
     #local{
     	margin-top: 10px;
         border-radius: 15px;
+        margin-left: 5px;
     }
     
     #telefone{
     	margin-top: 10px;
+        border-radius: 15px;
+    }
+
+    #numero{
+        margin-top: 10px;
         border-radius: 15px;
     }
     
@@ -104,69 +123,10 @@ section img {
     #tamanho{
         border-radius: 15px;
     }
+
   	#container{
   		margin-top: 10px;
   	}
-    
-    /*@media (max-width: 600px) {
-    
-    fieldset:nth-child(2) {
-	display: inline;
-}
-    
-        .title{
-        text-align: center;
-        font-size: 20px;
-        color: #BB4E26;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-    }
-    
-    #bt{
-        text-transform: uppercase;
-        padding-left:110px;
-        padding-right:110px;
-        border-radius: 15px;
-        letter-spacing: 2px;
-    }
-    	
-	#nome{
-	 	margin-top:10px;
-        border-radius: 15px;
-    }
-    
-    #email{
-        margin-top:10px;
-        border-radius: 15px;
-    }
-    
-    #local{
-        margin-top:10px;
-        border-radius: 15px;
-    }
-    
-    #telefone{
-        margin-top:15px;
-        border-radius: 12px;
-    }
-    
-    #data{
-        border-radius: 15px;
-    }
-    
-    #hora{
-        border-radius: 15px;
-    }
-    
-     #tipo{
-        border-radius: 15px;
-    }
-    
-     #tamanho{
-        border-radius: 15px;
-    }
-		
-	}*/
     
 @media only screen and (max-width: 1080px) {
 	
@@ -188,6 +148,7 @@ section img {
 	fieldset:nth-child(2) {
 		display: inline;
 	}
+
 	#nome{
 	 	margin-top:10px;
         border-radius: 15px;

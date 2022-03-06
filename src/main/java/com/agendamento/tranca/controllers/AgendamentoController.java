@@ -28,9 +28,6 @@ public class AgendamentoController {
 
 	@PostMapping("/agendar")
 	public String createAgendamento(@Valid AgendamentoModel agendamento, BindingResult br, RedirectAttributes attributes) {
-		String [] textoSeparado = agendamento.getData().split("-");
-		agendamento.setMes(textoSeparado[1]);
-		
 		if (service.findByData(agendamento) != null) {
 			attributes.addFlashAttribute("msg", "Data já cadastrada! "+ agendamento.getData());
 			return "redirect:/agendar";

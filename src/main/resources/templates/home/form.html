@@ -15,8 +15,8 @@
 <body>
 <section>
     <form method="post" action="/agendar" th:object="${agendamento}" name="formulario">
-  		<center>	
-             <p class="title">Dados do Cliente</p>                
+            <center>
+                <p class="title">Dados do Cliente</p>
                 <fieldset>
                     <div class="col-md-6">
                         <input placeholder="Nome" name="nome" type="text" class="form-control" id="nome"
@@ -26,49 +26,65 @@
                         <input placeholder="Email" name="email" type="email" class="form-control" id="email"
                             th:field="*{email}" maxlength="50" required>
                     </div>
-             	 </fieldset>
-               	<fieldset>
-                    <div class="col-md-4">
-                        <input placeholder="Telefone" type="text" class="form-control" id="telefone" th:field="*{telefone}"
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-5">
+                        <input placeholder="Telefone" type="text" class="form-control" id="telefone"
+                            th:field="*{telefone}" maxlength="50" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-6">
+                        <input name="cep" id="cep" type="text" class="form-control" placeholder="CEP" th:field="*{cep}"
                             maxlength="15" required>
                     </div>
                     <div class="col-md-6">
-                            <input name="local" id="local"
-                                type="text" class="form-control" placeholder="Endereço"
-                                th:field="*{local}" maxlength="30" required>
-                        </div>
-                  </fieldset>
-					
-                    <p class="title">Dados do Agendamento</p>
-                    <div id="emailHelp" class="form-text">Serão confimardos agendamentos apenas de Segunda à Sábado das
-                        8:00 às 17:00</div>
-                    	  
-                   <fieldset>	
+                        <input name="local" id="local" type="text" class="form-control" placeholder="Endereço"
+                            th:field="*{local}" maxlength="50" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-6">
+                        <input name="cidade" id="cidade" type="text" class="form-control" placeholder="cidade"
+                            th:field="*{cidade}" maxlength="50" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-6">
+                        <input name="bairro" id="bairro" type="text" class="form-control" placeholder="Bairro"
+                            th:field="*{bairro}" maxlength="50" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-2">
+                        <input placeholder="Número" type="text" class="form-control" id="numero" th:field="*{numero}"
+                            maxlength="50" required>
+                    </div>
+                </fieldset>
+                <p class="title">Dados do Agendamento</p>
+                <div id="emailHelp" class="form-text">Serão confimardos agendamentos apenas de Segunda à Sábado das
+                    8:00 às 17:00</div>
+                <fieldset>
                     <div id="container" class="col-md-4">
                         <label for="formGroupExampleInput2" class="form-label">Data</label>
                         <input name="data" type="date" class="form-control" id="data" th:field="*{data}" required>
-                        </div>
                     </div>
-					</fieldset>
-					
-					<fieldset>
+                    </div>
+                </fieldset>
+                <fieldset>
                     <div id="container" class="col-md-2">
                         <label for="formGroupExampleInput2" class="form-label">Hora</label>
                         <input name="hora" type="time" class="form-control" id="hora" th:field="*{horario}" required>
                     </div>
-                    </fieldset>
-                    
-					<fieldset>
-                           <div id="container" class="col-md-5">
-                             <label for="inputState" class="form-label">Tipo
-                                de Trança</label> <select th:field="*{tipoTranca}" id="tipo"
-                                class="form-select">
-                                <option
-                                    th:each="tipoTranca : ${T(com.agendamento.tranca.enums.TipoTranca).values()}"
-                                    th:value="${tipoTranca}" th:text="${tipoTranca}"></option>
-                            </select>
-                        </div>
-
+                </fieldset>
+                <fieldset>
+                    <div id="container" class="col-md-5">
+                        <label for="inputState" class="form-label">Tipo
+                            de Trança</label> <select th:field="*{tipoTranca}" id="tipo" class="form-select">
+                            <option th:each="tipoTranca : ${T(com.agendamento.tranca.enums.TipoTranca).values()}"
+                                th:value="${tipoTranca}" th:text="${tipoTranca}"></option>
+                        </select>
+                    </div>
                     <div id="container" class="col-md-5">
                         <label for="inputState" class="form-label">Tamanho</label>
                         <select th:field="*{tamanho}" id="tamanho" class="form-select">
@@ -76,15 +92,16 @@
                                 th:value="${tamanho}" th:text="${tamanho}"></option>
                         </select>
                     </div>
-                    </fieldset>
-                    <fieldset>
+                </fieldset>
+                <fieldset>
                     <div>
                         <button id="bt" type="submit" class="btn" onclick="complete()">Agendar</button>
                     </div>
-                     <div class="alert alert-danger" role="alert" th:if="${msg}"> <strong th:text="${msg}"></strong></div>
-                     </fieldset>
+                    <div class="alert alert-danger" role="alert" th:if="${msg}"> <strong th:text="${msg}"></strong>
+                    </div>
+                </fieldset>
             </center>
-    </form>
+        </form>
     </section>
 </body>
 <script src="js/jquery-3.6.0.min.js"></script>
@@ -92,6 +109,7 @@
 <script src="sweetalert2.all.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="js/script.js"></script>
+<script src="js/consumerViaCep.js"></script>
 <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 

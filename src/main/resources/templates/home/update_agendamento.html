@@ -15,10 +15,8 @@
     <form method="post" action="/update" th:object="${agendamento}" name="formulario">
   		<center>	
              <p class="title">Edite os Dados do Cliente</p>                
-                <fieldset>
-                
-                <input type="hidden" th:field="*{codigo}" />
-             
+                    <fieldset>
+                    <input type="hidden" th:field="*{codigo}" />
                     <div class="col-md-6">
                         <input placeholder="Nome" name="nome" type="text" class="form-control" id="nome"
                             th:field="*{nome}" maxlength="50" required>
@@ -27,49 +25,65 @@
                         <input placeholder="Email" name="email" type="email" class="form-control" id="email"
                             th:field="*{email}" maxlength="50" required>
                     </div>
-             	 </fieldset>
-               	<fieldset>
-                    <div class="col-md-4">
-                        <input placeholder="Telefone" type="text" class="form-control" id="telefone" th:field="*{telefone}"
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-5">
+                        <input placeholder="Telefone" type="text" class="form-control" id="telefone"
+                            th:field="*{telefone}" maxlength="50" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-6">
+                        <input name="cep" id="cep" type="text" class="form-control" placeholder="CEP" th:field="*{cep}"
                             maxlength="15" required>
                     </div>
                     <div class="col-md-6">
-                            <input name="local" id="local"
-                                type="text" class="form-control" placeholder="Endereço"
-                                th:field="*{local}" maxlength="30" required>
-                        </div>
-                  </fieldset>
-					
-                    <p class="title">Edite os Dados do Agendamento</p>
-                    <div id="emailHelp" class="form-text">Serão confimardos agendamentos apenas de Segunda à Sábado das
-                        8:00 às 17:00</div>
-                    	  
-                   <fieldset>	
+                        <input name="local" id="local" type="text" class="form-control" placeholder="Endereço"
+                            th:field="*{local}" maxlength="50" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-6">
+                        <input name="cidade" id="cidade" type="text" class="form-control" placeholder="cidade"
+                            th:field="*{cidade}" maxlength="50" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-6">
+                        <input name="bairro" id="bairro" type="text" class="form-control" placeholder="Bairro"
+                            th:field="*{bairro}" maxlength="50" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="col-md-2">
+                        <input placeholder="Número" type="text" class="form-control" id="numero" th:field="*{numero}"
+                            maxlength="50" required>
+                    </div>
+                </fieldset>
+                <p class="title">Edite os Dados do Agendamento</p>
+                <div id="emailHelp" class="form-text">Serão confimardos agendamentos apenas de Segunda à Sábado das
+                    8:00 às 17:00</div>
+                <fieldset>
                     <div id="container" class="col-md-4">
                         <label for="formGroupExampleInput2" class="form-label">Data</label>
                         <input name="data" type="date" class="form-control" id="data" th:field="*{data}" required>
-                        </div>
                     </div>
-					</fieldset>
-					
-					<fieldset>
+                    </div>
+                </fieldset>
+                <fieldset>
                     <div id="container" class="col-md-2">
                         <label for="formGroupExampleInput2" class="form-label">Hora</label>
                         <input name="hora" type="time" class="form-control" id="hora" th:field="*{horario}" required>
                     </div>
-                    </fieldset>
-                    
-					<fieldset>
-                           <div id="container" class="col-md-5">
-                             <label for="inputState" class="form-label">Tipo
-                                de Trança</label> <select th:field="*{tipoTranca}" id="tipo"
-                                class="form-select">
-                                <option
-                                    th:each="tipoTranca : ${T(com.agendamento.tranca.enums.TipoTranca).values()}"
-                                    th:value="${tipoTranca}" th:text="${tipoTranca}"></option>
-                            </select>
-                        </div>
-
+                </fieldset>
+                <fieldset>
+                    <div id="container" class="col-md-5">
+                        <label for="inputState" class="form-label">Tipo
+                            de Trança</label> <select th:field="*{tipoTranca}" id="tipo" class="form-select">
+                            <option th:each="tipoTranca : ${T(com.agendamento.tranca.enums.TipoTranca).values()}"
+                                th:value="${tipoTranca}" th:text="${tipoTranca}"></option>
+                        </select>
+                    </div>
                     <div id="container" class="col-md-5">
                         <label for="inputState" class="form-label">Tamanho</label>
                         <select th:field="*{tamanho}" id="tamanho" class="form-select">
@@ -77,13 +91,11 @@
                                 th:value="${tamanho}" th:text="${tamanho}"></option>
                         </select>
                     </div>
-                    </fieldset>
-                    <fieldset>
+                </fieldset>
+                <fieldset>
                     <div>
                         <button id="bt" type="submit" class="btn">Editar</button>
-                    </div>
-                     <div class="alert alert-danger" role="alert" th:if="${msg}"> <strong th:text="${msg}"></strong></div>
-                     </fieldset>
+                </fieldset>
             </center>
     </form>
     </section>

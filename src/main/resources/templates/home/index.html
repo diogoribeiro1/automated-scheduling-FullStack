@@ -13,13 +13,12 @@
 
 <body>
 
-	<section style="background-image: url('img/bg2.webp');">
+	<section style="background-image: url('img/bg3.webp');">
 		<header>
-			<a href="#" class="logo"><img src="img/logo1.png" alt=""></a>
 			<div class="toggleMenu" onclick="toggleMenu();"></div>
 			<ul class="navbar">
 				<li><a href="#">Home</a></li>
-				<li><a th:href="@{/agendar}">Agendamentos</a></li>
+				<li><a th:href="@{/agendar}">Agendar</a></li>
 				<li><a th:href="@{/listagendamentos}">Lista Agendamentos</a></li>
 			</ul>
 		</header>
@@ -30,7 +29,7 @@
 				</h2>
 				<br><br>
 				<a class="btn" th:href="@{/agendar}">Agendar</a> <a class="btn2"
-					href="#">Contato</a>
+					th:href="@{/listagendamentos}">Agendamentos</a>
 			</div>
 		</div>
 		<ul class="icons">

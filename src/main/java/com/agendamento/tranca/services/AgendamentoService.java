@@ -44,10 +44,6 @@ public class AgendamentoService {
 		return repository.findByCodigo(codigo);
 	}
 	
-	public AgendamentoModel findByMes(AgendamentoModel agendamento) {
-		return repository.findByMes(agendamento.getMes());
-	}
-	
 	public AgendamentoModel findByData(AgendamentoModel agendamento) {
 		return repository.findByData(agendamento.getData());
 	}
