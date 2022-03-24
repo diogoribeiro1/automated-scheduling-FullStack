@@ -1,5 +1,5 @@
 # automated-scheduling-FullStack
-Software responsivo de agendamento com envio de email e uso da api ViaCep , CRUD completo, do BackEnd ao FrontEnd.
+Software responsivo de agendamento, com envio de email, uso da api ViaCep e CRUD completo, do BackEnd ao FrontEnd.
 
 Testem o software rodando = https://agendamento-diogoribeiro.herokuapp.com/
 
