@@ -3,9 +3,9 @@ Software responsivo de agendamento, com envio de email, uso da api ViaCep e CRUD
 
 Testem o software rodando = https://agendamento-diogoribeiro.herokuapp.com/
 
-<h3><li>Tecnologias usadas</li></h3>
+<h2><li>Tecnologias usadas</li></h3>
 
-<h2><li>Tecnologias BackEnd</li></h2>
+<h4><li>Tecnologias BackEnd</li></h4>
     Java<br>
     Spring<br>
     Spring Email<br>
@@ -16,7 +16,7 @@ Testem o software rodando = https://agendamento-diogoribeiro.herokuapp.com/
     H2 Database<br>
     PostgreSQL<br>
     Thymeleaf<br>
-<h2><li>Tecnologias FrontEnd</li></h2>
+<h4><li>Tecnologias FrontEnd</li></h4>
     HTML5<br>
     CSS3<br>
     JavaScript<br>
