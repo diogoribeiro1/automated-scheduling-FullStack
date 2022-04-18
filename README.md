@@ -22,6 +22,7 @@ Testem o software rodando = https://agendamento-diogoribeiro.herokuapp.com/
     JavaScript<br>
     BootStrap<br>
     Jquery<br>
+    SweetAlert<br>
 <h1>Screenshots:</h1>
                                                                <h2>Página Inical</h2>
                                                                
